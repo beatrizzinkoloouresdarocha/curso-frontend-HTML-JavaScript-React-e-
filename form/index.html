@@ -41,14 +41,57 @@
         <!--8-multiplas opções-->
         <div>
             <label form="items">Selecione os itens desejados:</label> 
-            <select name="items">
+            <select name="items" multiple>
                 <option volue="pera">Pera</option>
                 <option volue="feijão">Feijão</option>
                 <option volue="arroz">Arroz</option>
                 <option volue="minho">Milho</option>
             </select>
         </div>
+        <!--9-testarea-->
+        <div>
+            <label form="coment">O que voçê achou do post:</label> 
+            <textarea name="coment"></textarea>
+        </div>
+        <!--10-fieldset e legend-->
+        <div>
+            <fieldset>
+                <legend>Preencha suas informações:</legend>
+                <label form="firstname">Nome:</label> 
+                <input type="text" value="firstname">
+                <label form="lastname">Sobrenome:</label> 
+                <input type="text" name="lastname">
+            </fieldset>
+        </div>
+          <!--11-data list-->
+          <div>
+            <label form="flavor">Escolha o sabor:</label> 
+            <input type="text" list="flavor" name="flavor">
 
+            <datalist id="flavor">
+                <option volue="cereja"></option>
+                <option volue="Morango"></option>
+                <option volue="Abacaxi"></option>
+                <option volue="Chocolate"></option>
+            </datalist>
+          </div>
+
+        <!--12-senha -->
+        <div>
+            <label form="password">Digite sua senha:</label> 
+            <input type="password" name="password">
+        </div>
+
+        <!--14-radio button-->
+        <div>
+            <label form="car-model">Escolha o seu modelo do seu carro:</label> 
+            <div class="radio">
+            <input type="radio" value="bnw" name="car-model">
+            <label form="bmw">BMW</label> 
+        </div>
+
+        <!--13-resetar form-->
+         <input type="reset" name="Limpar">
         <!--5-envio de form -->
          <input type="submit" value="Enviar"/>
     </form>
