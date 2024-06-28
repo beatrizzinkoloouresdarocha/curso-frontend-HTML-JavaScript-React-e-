@@ -34,7 +34,7 @@ input[type="file"]{
     width: 400px;
 }
 
-/* pag header*/
+/* pag header */
 .header{
     height: 160px;
     padding: 20px;
@@ -48,5 +48,10 @@ input[type="file"]{
 
 /* form container */
 .header-container{
-    background-color: #FFF;
+    background-color: #fdfdfd;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: -62px;
 }
+
