@@ -24,4 +24,29 @@ p label{
 input{
     border: none;
     border-bottom: 1px solid#ccc;
+    padding: 10px 0;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"]{
+    width: 400px;
+}
+
+/* pag header*/
+.header{
+    height: 160px;
+    padding: 20px;
+    background-color: #673a67;
+}
+
+.header h3{
+    color: #fff;
+    margin-top: 0;
+}
+
+/* form container */
+.header-container{
+    background-color: #FFF;
 }
