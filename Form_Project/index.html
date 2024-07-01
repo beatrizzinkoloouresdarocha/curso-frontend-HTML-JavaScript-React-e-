@@ -53,9 +53,68 @@
                         <label for="discription"
                         >Descrição<span class="required-fied">*</span></label
                         >
-                        <textarea name="discription" id="discription" class="block" placeholder="Aqui voçê coloca detalhes do veiculo,por exemplo:se ele tem algum arranhão "></textarea>
-                        />
+                       <textarea name="discription" id="discription" class="block" placeholder="Aqui voçê coloca os detalhes do veiculo,por exemplo:se ele tem algum arranhâo">
+                       </textarea>
                         </div>
+                        <div class="box-input">
+                            <label for="brand"
+                            >Marca <span class="required-fied">*</span></label
+                            >
+                            <input
+                            type="text"
+                            name="brand"
+                            id="title"
+                            class="block"
+                            placeholder="Digite a marca do veiculo"
+                            required
+                            />
+                            </div>
+                            <div class="box-input">
+                                <label for="model"
+                                >Modelo do veiculo <span class="required-fied">*</span></label
+                                >
+                                <input
+                                type="text"
+                                name="model"
+                                id="title"
+                                class="block"
+                                placeholder="Digite o modelo do veiculo"
+                                required
+                                />
+                                </div>
+                                <div class="box-input">
+                                    <label for="mileage"
+                                    >Kilometragem<span class="required-fied">*</span></label
+                                    >
+                                    <input
+                                    type="number"
+                                    name="mileage"
+                                    id="mileage"
+                                    class="block"
+                                    placeholder="Digite a Kilometragem do veiculo"
+                                    required
+                                    />
+                                    </div>
+                                    <div class="box-input">
+                                        <label for="purchase_date"
+                                        >Data de compra<span class="required-fied">*</span></label
+                                        >
+                                        <input
+                                        type="date"
+                                        name="purchase_date"
+                                        id="purchase_date"
+                                        class="block"
+                                        required
+                                        />
+                                        </div>
+                                    </div>
+                                    <div class="box-input">
+                                       <p>Tipo de câmbio:<span class="required-fied">*</span></p>
+                                       <input type="radio" id="manual" name="gear" />
+                                       <label for="manual">Manual</label>
+                                       <input type="radio" id="auto" name="gear"/>
+                                       <label for="auto">Automático</label>
+                                    </div>
                 <input type="submit" value="Enviar" />
               </form>
             </div>
