@@ -60,3 +60,45 @@ textarea{
     top: -62px;
 }
 
+/* form header */
+.form-header{
+    border-bottom:1px solid #DFDFDF;
+    height: 45px;
+}
+
+.form-header P{
+    color: #673a67;
+    border-bottom: 2px solid #673a67;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    height: 45px;
+    line-height: 45px;
+}
+
+/* form body */
+.form-body{
+    padding: 30px;
+}
+
+.form-title{
+    margin-bottom: 15px;
+}
+
+.form-body p{
+    margin-bottom: 20px;
+}
+
+.required-field{
+    color: #d80835;
+}
+
+.box-input{
+    margin-bottom: 30px;
+}
+
+.block{
+    display: block;
+}
+
