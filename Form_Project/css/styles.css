@@ -102,3 +102,33 @@ textarea{
     display: block;
 }
 
+.optional-box{
+    display: inline-block;
+    margin: 0 30px  30px 0;
+}
+
+.optional-list li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.box-input p{
+    margin-bottom: 15px;
+}
+
+.btn-submit{
+    background-color: #673a67;
+    color: #fff;
+    border: 2px solid transparent;
+    width: 150px;
+    right: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.btn-submit:hover{
+    background-color: #fff;
+    border: #673a67;
+    color: #673a67;
+}
