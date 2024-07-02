@@ -129,6 +129,6 @@ textarea{
 
 .btn-submit:hover{
     background-color: #fff;
-    border: #673a67;
+    border-color: #673a67;
     color: #673a67;
 }
