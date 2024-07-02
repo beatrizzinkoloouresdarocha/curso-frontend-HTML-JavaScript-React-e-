@@ -1,4 +1,30 @@
-/* 2-Média query */
+/* 2-media  query */
 h1{
     color: red;
+}
+
+@media screen and (max-width: 500px) {
+    h1{
+        color: blue;
+    }
+}
+    
+/* 3-min width */
+p{
+    background-color: red;
+    color: black;
+}
+@media screen and(min-width:800px) {
+     
+}
+
+/*4 - landscape */
+h3{
+    display: none;
+}
+
+@media screen and(orientation:landscape) and(max-width:500px) {
+    h3{
+        display: block;
+    }
 }
