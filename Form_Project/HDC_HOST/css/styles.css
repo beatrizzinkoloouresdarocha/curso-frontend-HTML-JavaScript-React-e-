@@ -92,3 +92,12 @@ nav{
 .main-banner p {
     font-size: 32px;
 }
+
+/* services */
+.services-container{
+    padding: 5rem 0;
+}
+
+.services-container ul{
+    display: flex;
+}
