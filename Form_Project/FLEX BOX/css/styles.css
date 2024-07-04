@@ -1,0 +1,17 @@
+body{
+    padding-bottom: 500px;
+}
+
+
+/*1-flex--> */
+.flex{
+    display: flex;
+    background-color: #999494;
+}
+
+/* 2- flex colum */
+.flex-colum{
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+}
