@@ -82,4 +82,14 @@ h2{
     justify-content: center;
     border:1px solid #fff;
     border-bottom: none;
+    padding: 0.5rem;
+    width: 150px;
+}
+
+#multipliction-operactions.row:last-child{
+    border-radius: 1px solid #ccc;
+}
+
+#multipliction-operactions .result{
+    margin-left: 0.4rem;
 }
