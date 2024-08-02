@@ -1,5 +1,7 @@
 // seleção de elementos //
-const multiplictionform=Selection
+const multiplictionform =document.querySelector("#multiplictionform");
+const numberinput =document.querySelector("#number");
+const  multiplictioninput=document.querySelector("#multiplicador");
 
 
 // funções //
