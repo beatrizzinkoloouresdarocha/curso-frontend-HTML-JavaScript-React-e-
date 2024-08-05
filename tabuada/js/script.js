@@ -5,16 +5,20 @@ const  multiplictioninput=document.querySelector("#multiplicador");
 
 
 // funções //
+const createTable= (number,multiplicatorNumber)=>{
+    console.log(number, multiplicatorNumber);
+}
+
 
 // eventos //
-multiplictionForm.addEventListener("submit", (e) => {
+// eventos
+multiplicationForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const multiplictionNumber =+numberinput.value;
+    const multiplicationNumber = +numberInput.value;
+    const multiplicatorNumber = +multiplicationInput.value;
 
-    const multiplicatorNumber =+multiplictioninput.value;
+    if (!multiplicationNumber || !multiplicatorNumber) return;
 
-    if(!multiplictionNumber || !multiplicatorNumber) return;
-
-    console.log(multiplictionNumber, multiplicatorNumber);
+    console.log(multiplicationNumber, multiplicatorNumber);
 });
