@@ -7,10 +7,14 @@ const  multiplictioninput=document.querySelector("#multiplicador");
 // funções //
 
 // eventos //
-multiplictionform.addEventListener("submit,(e) =>"){
+multiplictionForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const multiplictionNumber=  +numberinput.value;
+    const multiplictionNumber =+numberinput.value;
 
-    const multiplicatorNumber=  multiplictioninput.value;
-}
+    const multiplicatorNumber =+multiplictioninput.value;
+
+    if(!multiplictionNumber || !multiplicatorNumber) return;
+
+    console.log(multiplictionNumber, multiplicatorNumber);
+});
