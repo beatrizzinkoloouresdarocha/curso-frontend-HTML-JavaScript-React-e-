@@ -90,8 +90,17 @@ createTable(data);
     })
 });
 
-clearBtn.addEventListener("click",(e) => {
+calcBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
+    const weight = +weightInput.value.replace(",", ".");
+    const height = +heightInput.value.replace(",", ".");
+
+    console.log(weight, height);
+});
+
+clearBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    
     cleanInputs();
 });
