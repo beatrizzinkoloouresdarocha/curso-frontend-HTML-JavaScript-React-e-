@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de imc JS</title>
+    <title>Calculadora de IMC JS</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.gogleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.gogleapis.com/css?family=lato:ital,wght@0,100;0,300;0,400;0,700;0,900;0"
-    rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+        rel="stylesheet"
     />
-
-    <script src="js/script.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
-    <h1>teste</h1>
+    <div class="container">
+        <div id="calc-container">
+            <h2>Calculadora de IMC</h2>
+            <form id="imc-form">
+                <div class="form-inputs">
+                    <label for="height">Altura:</label>
+                    <input
+                     type="text"
+                     name="height"
+                     id="height" 
+                     placeholder="Exemplo:1,75"
+                     />
+                </div>
+                <div class="form-control">
+                    <label for="weight">Peso:</label>
+                    <input
+                     type="text"
+                     name="weight"
+                     id="weight" 
+                     placeholder="Exemplo:70,5"
+                     />
+                </div>
+            </form>
+        </div>
+    </div>  
 </body>
 </html>
