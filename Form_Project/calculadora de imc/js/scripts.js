@@ -37,8 +37,9 @@ const data = [
     }
 ];
 
+
 // SELEÇÃO DE ELEMENTOS
-const IMCTable = document.querySelector("#imc-table");
+const imcTable = document.querySelector("#imc-table");
 
 const heightInput = document.querySelector("#height"); 
 const weightInput = document.querySelector("#weight"); 
@@ -48,6 +49,7 @@ const clearBtn = document.querySelector("#clear-btn");
 // Funções
 function createTable(data) { 
     data.forEach((item) => {
+
         const div = document.createElement("div");
         div.classList.add("table-data");
 
@@ -64,7 +66,7 @@ function createTable(data) {
         div.appendChild(info);
         div.appendChild(obesity);
 
-        IMCTable.appendChild(div); 
+        imcTable.appendChild(div); 
     });
 }
 
@@ -96,7 +98,11 @@ calcBtn.addEventListener("click", (e) => {
     const weight = +weightInput.value.replace(",", ".");
     const height = +heightInput.value.replace(",", ".");
 
-    console.log(weight, height);
+    if (!weight || height) return;
+
+    const imc = calcImc(weight,height);
+
+    console.log(imc);
 });
 
 clearBtn.addEventListener("click", (e) => {
