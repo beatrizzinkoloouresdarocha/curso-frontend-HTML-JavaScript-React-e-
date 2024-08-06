@@ -37,7 +37,6 @@ const data = [
     }
 ];
 
-
 // SELEÇÃO DE ELEMENTOS
 const imcTable = document.querySelector("#imc-table");
 
@@ -45,11 +44,14 @@ const heightInput = document.querySelector("#height");
 const weightInput = document.querySelector("#weight"); 
 const calcBtn = document.querySelector("#calc-btn");
 const clearBtn = document.querySelector("#clear-btn");
+const resultContainer = document.querySelector("#result-container");
+const imcNumber = document.querySelector("#imc-number span");
+const imcInfo = document.querySelector("#imc-info span");
+const backBtn = document.querySelector("#back-btn");
 
 // Funções
 function createTable(data) { 
     data.forEach((item) => {
-
         const div = document.createElement("div");
         div.classList.add("table-data");
 
@@ -71,30 +73,45 @@ function createTable(data) {
 }
 
 function cleanInputs(){
-    heightInput.value=""
-    weightInput.value=""
+    heightInput.value = "";
+    weightInput.value = "";
 }
 
 function validDigits(text){
-    return text.replace(/[^0-9,]/g,"")
+    return text.replace(/[^0-9.]/g, "");
 }
 
 function calcImc(weight, height){
-    const imc = (weight /(height * height)).toFixed(1);
-
+    const imc = (weight / (height * height)).toFixed(1);
     return imc;
+}
+
+function showResult(imc) {
+    // Determinar a classificação do IMC
+    let info;
+    data.forEach((item) => {
+        if (imc >= item.min && imc <= item.max) {
+            info = item.info;
+        }
+    });
+
+    if (!info) return;
+
+    imcNumber.innerText = imc;
+    imcInfo.innerText = info;
+
+    resultContainer.classList.remove("hide");
 }
 
 // Inicialização
 createTable(data);
 
-//Eventos //
-[heightInput,weightInput].forEach((el)=>{
-    el.addEventListener("input",(e) =>{
-    const updateValue=validDigits(e.target.value);
-
-        e.target=value=updateValue;
-    })
+// Eventos
+[heightInput, weightInput].forEach((el) => {
+    el.addEventListener("input", (e) => {
+        const updateValue = validDigits(e.target.value);
+        e.target.value = updateValue;
+    });
 });
 
 calcBtn.addEventListener("click", (e) => {
@@ -105,13 +122,18 @@ calcBtn.addEventListener("click", (e) => {
 
     if (!weight || !height) return;
 
-    const imc = calcImc(weight,height);
+    const imc = calcImc(weight, height);
 
-    console.log(imc);
+    showResult(imc);
 });
 
 clearBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    
     cleanInputs();
+    resultContainer.classList.add("hide");
+});
+
+backBtn.addEventListener("click", () => {
+    cleanInputs();
+    resultContainer.classList.add("hide");
 });
