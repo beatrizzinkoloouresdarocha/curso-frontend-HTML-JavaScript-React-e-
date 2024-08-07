@@ -104,3 +104,23 @@ produts.map((produt) =>{
 })
 
 console.log(produts);
+
+// 6-template  literals//
+const UserName="Beatriz"
+const age = 23
+
+console.log(`O nome do usuário é ${UserName} e ela tem ${age} anos`);
+
+// 7-destructuring //
+const fruits = ["Maçã", "Banana", "Laranja"];
+
+const [f1, f2, f3] = fruits;
+
+console.log(f1, f2);
+
+const productDetails = {
+    name: "Mousse",
+    price: 39.99,
+    category: "Periférico",
+    color: "cinza"
+};
