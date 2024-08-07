@@ -4,8 +4,19 @@ console.log(axios);
 // 2 - Primeiro Request
 const getData = async () => {
     try {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+        const response = await axios.get(
+        "https://jsonplaceholder.typicode.com/users",
+        // 4--definindo header//
+        {
+            headers:{
+                "Content-type":"application/json",
+                custom: "header",
+            }
+        }
+    );
+
         console.log(response);
+
         return response.data;
     } catch (error) {
         console.log(error);
@@ -29,6 +40,13 @@ const printData = async () => {
         nameElement.textContent = user.name;
 
         div.appendChild(nameElement);
+
+        const emailElement = document.createElement("p");
+
+        emailElement.textContent =user.email;
+
+        div.appendChild(emailElement);
+    
         container.appendChild(div);
     });
 };
